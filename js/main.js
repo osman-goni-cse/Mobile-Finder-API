@@ -163,7 +163,28 @@ const showPhoneDetails = (phoneDetails) => {
             </tr>
           </table>
 
-          
+          <table class="mt-3 w-100">
+            <tr>
+              <td class="fw-bold text-center"  > Sensors 
+              </td>
+              <td>
+                ${phoneDetails.mainFeatures.sensors[0]?phoneDetails.mainFeatures.sensors[0]:''} <br>
+                ${phoneDetails.mainFeatures.sensors[1]?phoneDetails.mainFeatures.sensors[1]:''} <br> 
+                ${phoneDetails.mainFeatures.sensors[2]?phoneDetails.mainFeatures.sensors[2]:''} <br>
+                ${phoneDetails.mainFeatures.sensors[3]?phoneDetails.mainFeatures.sensors[3]:''} <br>
+                ${phoneDetails.mainFeatures.sensors[4]?phoneDetails.mainFeatures.sensors[4]:''} <br>
+                ${phoneDetails.mainFeatures.sensors[5]?phoneDetails.mainFeatures.sensors[5]:''} <br>
+                ${phoneDetails.mainFeatures.sensors[6]?phoneDetails.mainFeatures.sensors[6]:''} <br>
+                ${phoneDetails.mainFeatures.sensors[7]?phoneDetails.mainFeatures.sensors[7]:''} <br>
+                ${phoneDetails.mainFeatures.sensors[8]?phoneDetails.mainFeatures.sensors[8]:''}
+                
+                
+              </td> 
+            </tr>
+
+          </table>
+
+
           <table class="my-3 w-100">
             <tr>
               <td class="fw-bold text-center"  colspan="2"> Others </td>
