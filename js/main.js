@@ -1,3 +1,6 @@
+
+// Load all phones according to search
+
 const loadPhones = () => {
   const searchInput = document.getElementById('phone-text');
   const searchText = searchInput.value;
@@ -8,6 +11,8 @@ const loadPhones = () => {
 
   searchInput.value = '';
 }
+
+// Show all phones 
 
 const displayPhones = (phones) => {
 
@@ -32,12 +37,12 @@ const displayPhones = (phones) => {
 
       div.innerHTML = `
       <div class="card h-100">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="${phone.image}" class="card-img-top" alt="...">
         <div class="card-body">
           <!-- <h5 class="card-title">Card title</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
-          <h5 class="card-text">Phone Name: </h5>
-          <h5 class="card-text">Brand Name: </h5>
+          <h6 class="card-text"> <span class="fw-bold">Phone Name: </span> ${phone.phone_name} </h6>
+          <h6 class="card-text"><span class="fw-bold">Brand Name: </span>${phone.brand}</h6>
         </div>
         <div class="card-footer">
           <button class="btn btn-primary w-100">Details</button>
