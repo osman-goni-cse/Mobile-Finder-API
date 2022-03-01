@@ -16,10 +16,24 @@
 <body>
   
   <!-- Site name and Search Box -->
-  
+
   <section class="container">
 
     <h1 class="text-center">Mobile Finder</h1>
+
+    <div class="input-group my-3 w-50 mx-auto">
+      <input id="phone-text" type="text" class="form-control" placeholder="Enter Mobile Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+      <button onclick="loadPhones()" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+    </div>
+
+  </section>
+
+  <!-- Show All Phones -->
+  <section class="container">
+
+    <div id="show-phones" class="row row-cols-1 row-cols-md-3 g-4">
+     
+    </div>
 
   </section>
 
