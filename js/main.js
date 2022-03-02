@@ -1,5 +1,7 @@
 
-// Load all phones according to search
+/*------------------------------------
+ Load all phones according to search
+-------------------------------------- */
 
 const loadPhones = () => {
   const searchInput = document.getElementById('phone-text');
@@ -14,7 +16,9 @@ const loadPhones = () => {
   searchInput.value = '';
 }
 
-// Show all phones 
+/*--------------------
+ Show all phones 
+ ---------------------*/
 
 const displayPhones = (phones) => {
 
@@ -58,7 +62,10 @@ const displayPhones = (phones) => {
   }
 }
 
-// Details
+/*-----------------------------------
+ Load Details of a Particular phone 
+-------------------------------------
+*/
 
 const loadDetails = (phoneId) => {
   const url = `https://openapi.programming-hero.com/api/phone/${phoneId}`
@@ -68,7 +75,10 @@ const loadDetails = (phoneId) => {
   .then(data => showPhoneDetails(data.data))
 }
 
-// show Details of a phone
+/*-----------------------------------
+ Show Details of a Particular phone 
+-------------------------------------
+*/
 
 const showPhoneDetails = (phoneDetails) => {
 
@@ -102,21 +112,21 @@ const showPhoneDetails = (phoneDetails) => {
             </tr>
             <tr>
               <td  class="fw-bold "> Chipset </td>
-              <td class="table-data">${phoneDetails.mainFeatures.chipSet?phoneDetails.mainFeatures.chipSet:''}  </td>
+              <td class="table-data">${phoneDetails.mainFeatures.chipSet?phoneDetails.mainFeatures.chipSet:'Information Not Available'}  </td>
             </tr>
             <tr>
               <td  class="fw-bold "> Display Size </td>
-              <td class="table-data">${phoneDetails.mainFeatures.displaySize?phoneDetails.mainFeatures.displaySize:''} </td>
+              <td class="table-data">${phoneDetails.mainFeatures.displaySize?phoneDetails.mainFeatures.displaySize:'Information Not Available'} </td>
             </tr>
 
             <tr>
               <td  class="fw-bold "> Memory </td>
-              <td class="table-data">${phoneDetails.mainFeatures.memory?phoneDetails.mainFeatures.memory:''} </td>
+              <td class="table-data">${phoneDetails.mainFeatures.memory?phoneDetails.mainFeatures.memory:'Information Not Available'} </td>
             </tr>
 
             <tr>
               <td  class="fw-bold "> Storage </td>
-              <td class="table-data">${phoneDetails.mainFeatures.storage?phoneDetails.mainFeatures.storage:''} </td>
+              <td class="table-data">${phoneDetails.mainFeatures.storage?phoneDetails.mainFeatures.storage:'Information Not Available'} </td>
             </tr>
           </table>
 
@@ -141,29 +151,29 @@ const showPhoneDetails = (phoneDetails) => {
             
             <tr>
               <td  class="fw-bold "> WLAN </td>
-              <td class="table-data">${phoneDetails.others?phoneDetails.others.WLAN:''}  </td>
+              <td class="table-data">${phoneDetails.others?phoneDetails.others.WLAN:'Information Not Available'}  </td>
             </tr>
             <tr>
               <td  class="fw-bold "> Bluetooth </td>
-              <td class="table-data">${phoneDetails.others?phoneDetails.others.Bluetooth:''} </td>
+              <td class="table-data">${phoneDetails.others?phoneDetails.others.Bluetooth:'Information Not Available'} </td>
             </tr>
 
             <tr>
               <td  class="fw-bold "> GPS </td>
-              <td class="table-data">${phoneDetails.others?phoneDetails.others.GPS:''} </td>
+              <td class="table-data">${phoneDetails.others?phoneDetails.others.GPS:'Information Not Available'} </td>
             </tr>
 
             <tr>
               <td  class="fw-bold "> NFC </td>
-              <td class="table-data">${phoneDetails.others?phoneDetails.others.NFC:''} </td>
+              <td class="table-data">${phoneDetails.others?phoneDetails.others.NFC:'Information Not Available'} </td>
             </tr>
             <tr>
               <td  class="fw-bold "> Radio </td>
-              <td class="table-data">${phoneDetails.others?phoneDetails.others.Radio:''} </td>
+              <td class="table-data">${phoneDetails.others?phoneDetails.others.Radio:'Information Not Available'} </td>
             </tr>
             <tr>
               <td  class="fw-bold "> USB </td>
-              <td class="table-data">${phoneDetails.others?phoneDetails.others.USB:''} </td>
+              <td class="table-data">${phoneDetails.others?phoneDetails.others.USB:'Information Not Available'} </td>
             </tr>
           </table>
         
@@ -175,19 +185,3 @@ const showPhoneDetails = (phoneDetails) => {
   </div>
   `
 }
-
-/*
-<td>
-                ${phoneDetails.mainFeatures.sensors[0]?phoneDetails.mainFeatures.sensors[0]:''} <br>
-                ${phoneDetails.mainFeatures.sensors[1]?phoneDetails.mainFeatures.sensors[1]:''} <br> 
-                ${phoneDetails.mainFeatures.sensors[2]?phoneDetails.mainFeatures.sensors[2]:''} <br>
-                ${phoneDetails.mainFeatures.sensors[3]?phoneDetails.mainFeatures.sensors[3]:''} <br>
-                ${phoneDetails.mainFeatures.sensors[4]?phoneDetails.mainFeatures.sensors[4]:''} <br>
-                ${phoneDetails.mainFeatures.sensors[5]?phoneDetails.mainFeatures.sensors[5]:''} <br>
-                ${phoneDetails.mainFeatures.sensors[6]?phoneDetails.mainFeatures.sensors[6]:''} <br>
-                ${phoneDetails.mainFeatures.sensors[7]?phoneDetails.mainFeatures.sensors[7]:''} <br>
-                ${phoneDetails.mainFeatures.sensors[8]?phoneDetails.mainFeatures.sensors[8]:''}
-                
-                
-              </td>
-*/
